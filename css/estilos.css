@@ -1,0 +1,30 @@
+body{
+	/*background: blue;*/
+	/*background: rgba(255,155,155,1);*/
+	/*background: rgb(255,155,155);*/
+	background: #A010FF;
+
+	color: white;
+}
+header{
+	border: 1px solid #CAFEAA;
+	text-align: center;
+}
+
+header nav ul li
+{
+	background: #F0A0F3;
+	border: 1px solid #0C8FFB;
+	border-radius: 5px;
+	display: inline-block;
+	width: 90px;
+}
+
+header nav ul li:hover
+{
+	background: #BAA553;
+	border: 1px solid #0C84FB;
+	border-radius: 50px;
+	display: inline-block;
+	width: 150px;
+}
