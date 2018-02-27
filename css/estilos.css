@@ -2,7 +2,7 @@ body{
 	/*background: blue;*/
 	/*background: rgba(255,155,155,1);*/
 	/*background: rgb(255,155,155);*/
-	background: #A010FF;
+	background: #b967ff;
 
 	color: white;
 }
@@ -13,18 +13,38 @@ header{
 
 header nav ul li
 {
-	background: #F0A0F3;
+	background: #01cdfe;
 	border: 1px solid #0C8FFB;
 	border-radius: 5px;
 	display: inline-block;
+	margin-right: 50px; 
+	/*margin: 0px 20px 0px 0px;*/
+	padding: 10px 20px ;
 	width: 90px;
+}
+main{
+	margin-top: 20px;
 }
 
 header nav ul li:hover
 {
-	background: #BAA553;
-	border: 1px solid #0C84FB;
+	background: #05ffa1;
+	border: 1px solid #05ffa1;
 	border-radius: 50px;
 	display: inline-block;
-	width: 150px;
+	width: 100px;
+}
+
+main article {
+	border:1px dashed black;
+	display: inline-block;
+	vertical-align: top;
+	width: 32.65%;
+}
+
+footer{
+	border:5px solid #ff71ce;
+	font-weight: bold;
+	padding: 50px;
+	text-align: center;
 }
