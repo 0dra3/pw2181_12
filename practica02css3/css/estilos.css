@@ -74,8 +74,37 @@ margin-right: 25px;
 	text-align: right;
 	padding-right: 122px;
 }
+
+#terceraseccion article{
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: top;
+	width: 23%;
+}
+#terceraseccion article img{
+	/*alineacion vertical de la imagen*/
+	vertical-align: middle;
+}
+#terceraseccion  article input
+{
+	border-radius: 5px;
+}
+#terceraseccion  article input[type="button"]
+{
+	border-radius: 5px;
+	background: #A4Cd28;
+	color: white;
+}
+
+
 .colorrosa{
 	color:#FF0099;
+}
+.colorverde{
+	color:#8bc500;
+}
+.colorazul{
+	color:#629ad4;
 }
 .nito{
 	font-weight: bold;
