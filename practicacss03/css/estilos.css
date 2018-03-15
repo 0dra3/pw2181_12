@@ -1,3 +1,4 @@
+font-family: 'Roboto', sans-serif;
 body{
 	font-size: 16px; /*1em*/
 	margin: 0 0 0 0;
@@ -25,19 +26,25 @@ header input{
 #s1{
 	background: #2a2a2a;
 }
-/*#S1A1 ul{
+#s2 img{
+	width: 30%
+}
+#s2{
+	background: #2a2a2a;
+}
+#S1A1 ul{
  width: 23%;
  list-style: none; 
 }
 #S1A2{
- width: 15%;
+ background: green;
 }
 #S1A3{
- width: 15%;
+ background: gray;
 }
 #S1A4{
- width: 14%;
+ background:  red;
 }
 #S1A5{
- width: 14%;
-}*/
+ background:  white;
+}
