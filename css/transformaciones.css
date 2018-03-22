@@ -1,0 +1,36 @@
+article{
+	background: greenyellow;
+	border: 2px solid black;
+	color:black;
+	margin: 20px 5px;
+	padding: 25px;
+	text-align: center;
+	-o-transition: all 5s linear;
+	-webkit-transition: all 5s linear;
+	-ms-transition: all 5s linear;
+	-moz-transition: all 5s linear;
+	transition: all 5s linear;
+	width: 400px;
+}
+
+article p{
+	font: 30px Tahoma;
+	font-weight: bold;
+	width: 100%;
+}
+/*
+article:hover{
+	height: 400px;
+	width:800px;
+}*/
+
+article:hover{
+	background:black;
+	color:greenyellow;
+	transform: -o-translate(150px,300px);
+	transform: -ms-translate(150px,300px);
+	transform: -webkit-translate(150px,300px);
+	transform: -moz-translate(150px,300px);
+	transform: translate(150px,300px);
+	transform: translate(150px,300px);
+}
