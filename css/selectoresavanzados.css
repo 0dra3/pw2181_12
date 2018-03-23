@@ -1,0 +1,48 @@
+/*imagen con cadena exacta*/
+img[alt]{
+	border: 5px solid blue;
+}
+/*Imagen con atributo SRC cadena exacta*/
+img[src="img/logo.png"]{
+	width: 400px;
+}
+/* ^ = circunflexo*/
+/*Imagen con atributo src con el inicio de la cadena*/
+img[src^="img/"]{
+	width: 150px;
+}
+/*Ultimo atributo de la cadena*/
+img[src$="png"]{
+	width: 250px;
+}
+/*En cualquier parte de la cadena*/
+img[src*="mg/"]{
+	width: 1000px;
+}
+
+/*indica que estos selectores estan sepadaso por espacios*/
+article[class~="resaltado"]{
+	border: 1px dashed blue;
+}
+article[class~="archivo"]{
+	border: 1px dashed red;
+}
+article[class~="ingles"]{
+	border: 1px dashed green;
+}
+/*El atributo class/id es una lista de atributos separados or guiones*/
+article[class|="ingles"]{
+	text-align: center;
+}
+
+/*Todos los de <P> seran seleccionados */
+
+div p{
+	color:#9901FF;
+}
+
+/*Selector de secundarios, solamente las<p> que se encuentrtan inmediatamente despues del <div>
+Solo hijos directos*/
+div > p{
+	color: pink;
+}
