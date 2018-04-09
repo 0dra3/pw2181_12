@@ -46,3 +46,46 @@ Solo hijos directos*/
 div > p{
 	color: pink;
 }
+/*el simbolo de mas significa el siguente*/
+h2 + p{
+	color:green;
+}
+
+/*Seleccionar todos los elementos <p> del elemento especificado*/
+h2 ~ p{
+	color:green;
+}
+
+
+
+#resumen,#experimento,#pruebas,#resultados,#conclusiones
+{
+	color:tomato;
+}
+/*Todos menos algo*/
+section:not(#referencias){
+	color:pink;
+}
+
+li:nth-child(odd){ /*impares**/
+color:green;
+}
+
+li:nth-child(even){ /*pares**/
+color:blue;
+}
+li:nth-child(5){ /*quinto elemento*/
+color:red;
+}
+
+li:nth-last-child(1){ /*el primero desde abajo*/
+color:yellow;
+}
+
+p{
+	font-weight: bold;
+}
+
+p:first-line{
+	font-weight: normal;
+}
