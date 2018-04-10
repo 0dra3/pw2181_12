@@ -1,0 +1,95 @@
+var a,b
+undefined
+var a,b = 6;
+undefined
+b
+6
+a
+undefined
+a=5
+5
+a==6
+false
+var c = a+b;
+undefined
+c
+11
+a>b
+false
+a>C
+VM6285:1 Uncaught ReferenceError: C is not defined
+    at <anonymous>:1:3
+(anonymous) @ VM6285:1
+a>c
+false
+b>c
+false
+c>a
+true
+alert('Java escrip')
+undefined
+alert('El aron es joto')
+undefined
+var respuesta= prom
+VM7984:1 Uncaught ReferenceError: prom is not defined
+    at <anonymous>:1:16
+(anonymous) @ VM7984:1
+var respuesta= prompt("Dame un numero",0);\
+VM8358:1 Uncaught SyntaxError: Invalid or unexpected token
+var respuesta= prompt("Dame un numero",0);
+undefined
+respuesta
+"666"
+alert('El aron es joto')
+undefined
+function suma(a,b){return a+b;}
+undefined
+suma
+ƒ suma(a,b){return a+b;}
+suma(a,b);
+11
+suma(a,c);
+16
+var sumaN=function(a,b){return a+b;}
+undefined
+sumaN
+ƒ (a,b){return a+b;}
+sumaN(10,10)
+20
+document
+#document
+document
+#document
+sumaN(respuesta,10)
+"66610"
+document.write("ola bb");
+undefined
+document.write(" como as estado");
+undefined
+document.write("<article id='demo'></article>");
+undefined
+document.getElementById('demo').innerHTML="mi article"
+"mi article"
+document.write("<input type='text' id='txt'>");
+undefined
+document.getElementById('txt').value=81
+81
+document.getElementById('txt').value=puto
+VM17349:1 Uncaught ReferenceError: puto is not defined
+    at <anonymous>:1:38
+(anonymous) @ VM17349:1
+document.getElementById('txt').value=777
+777
+console.log("escribimos en la consola del navegador");
+VM17383:1 escribimos en la consola del navegador
+undefined
+console.log(respuesta);
+VM17402:1 666
+undefined
+document.write("<button>da click</button>");
+undefined
+document.write("<button onclick=alert('tu madre')>Da click</button>");
+undefined
+(index):1 Uncaught SyntaxError: Invalid or unexpected token
+document.write("<button onclick=alert('tumama')>Da click2</button>");
+undefined
