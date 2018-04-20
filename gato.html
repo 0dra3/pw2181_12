@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="gatocss.css">
+</head>
+<body>
+
+	<button onclick="pararWorker();">reset</button>
+	<button onclick="iniciarWorker();">Iniciar</button>
+
+	<p> tiempo: <br><div id="resultado"></div></p>
+	<p> turno: <br><div id="jugador">jugador1</div></p>
+
+	<ul>
+		<li onclick="elije(11);" id="li11"></li>
+		<li onclick="elije(12);" id="li12"></li>
+		<li onclick="elije(13);" id="li13"></li>
+	</ul>
+	<ul>
+		<li onclick="elije(21);" id="li21"></li>
+		<li onclick="elije(22);" id="li22"></li>
+		<li onclick="elije(23);" id="li23"></li>
+	</ul>
+	<ul>
+		<li onclick="elije(31);" id="li31"></li>
+		<li onclick="elije(32);" id="li32"></li>
+		<li onclick="elije(33);" id="li33"></li>
+	</ul>
+
+
+	<script>
+			var w1,w2;
+			var turno="O";
+
+			function iniciarWorker()
+			{
+				//Preguntar si el navegador lo soporta
+				
+				if(typeof(Worker)!="undefined")
+				{
+					if(typeof(w1)=="undefined"){
+						w1 = new Worker("worker2.js");
+						w1.onmessage = function(event){
+						document.getElementById('resultado').innerHTML=event.data;  }
+					} 
+				}else{
+						alert("El navegador no soporta WebWorkers")
+						}
+			}
+			function pararWorker()
+			{
+				w1.terminate();
+				w1 = undefined;
+			}
+			function cambiaTurno()
+			{
+				//Preguntar si el navegador lo soporta
+				if(turno=="X"){
+					document.getElementById('jugador').innerHTML="jugador1"; 
+					turno="O";
+				} else{
+					document.getElementById('jugador').innerHTML="jugador2"; 
+					turno="X"
+				}  
+
+			}
+		function elije(N)
+		{
+			if(typeof(w1)=="undefined"){
+				iniciarWorker();
+			}
+			document.getElementById('li'+N).innerHTML=turno; 
+			cambiaTurno();
+		}
+
+		function checa(){
+			if(document.getElementById('li11').innerHTML==document.getElementById('li12').innerHTML==document.getElementById('li13').innerHTML){
+				pararWorker();
+			
+			} 
+			if(document.getElementById('li21').innerHTML==document.getElementById('li22').innerHTML==document.getElementById('li23').innerHTML){
+				pararWorker();
+		
+		}
+	}
+
+		
+		</script>
+</body>
+</html>

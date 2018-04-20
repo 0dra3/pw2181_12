@@ -1,0 +1,11 @@
+ul li{
+	display: inline-block;
+	border:  1px solid grey;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+ul{
+	margin-bottom: -15px;
+}
