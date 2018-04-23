@@ -73,18 +73,41 @@
 			}
 			document.getElementById('li'+N).innerHTML=turno; 
 			cambiaTurno();
+			checa();
 		}
 
 		function checa(){
-			if(document.getElementById('li11').innerHTML==document.getElementById('li12').innerHTML==document.getElementById('li13').innerHTML){
-				pararWorker();
-			
-			} 
-			if(document.getElementById('li21').innerHTML==document.getElementById('li22').innerHTML==document.getElementById('li23').innerHTML){
-				pararWorker();
-		
+
+			var l11=document.getElementById('li11').value;
+			var l12=document.getElementById('li12').value;
+			var l13=document.getElementById('li13').value;
+			var l21=document.getElementById('li21').value;
+			var l22=document.getElementById('li22').value;
+			var l23=document.getElementById('li23').value;
+			var l31=document.getElementById('li31').value;
+			var l32=document.getElementById('li32').value;
+			var l33=document.getElementById('li33').value;
+			if(l11==l12==l13=="O"){
+				var notificacion=new Notification("Acabo el juego");
+			}
 		}
-	}
+
+		function enviarNotificaciones(){
+			//Comprobar que el navegador soporta notificaciones
+			if(!("Notification" in window))
+			{
+				alert("No soporta notificaciones");
+			} else if(Notification.permission==="denied" || Notification.permission==="default")
+			{
+				//Pedimos permiso
+				Notification.requestPermission(function(permission){
+					if (permission==="granted") {
+						var notificacion=new Notification("Bienvenido a las Notificaciones de pw2181_12");
+					}
+				});
+			}
+			}
+	enviarNotificaciones();
 
 		
 		</script>
