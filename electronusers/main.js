@@ -16,6 +16,8 @@ function muestraPantallaPrincipal(){
 		protocol:'file',
 		slashes: true
 	}));
+	//Clic derechi, inspeccionar elemento
+	//PantallaPrincipal.webContents.openDevTools();
 	PantallaPrincipal.show();
 }
 app.on('ready',muestraPantallaPrincipal);
