@@ -1,16 +1,22 @@
 <?php 
 include 'conexiones.php';
- function valida(){
+ function buscarusuario(){
  	//Conectarnos al servidor de BD
  	$respuesta=false;
  	$usuario=$_POST["usuario"];
- 	$clave	=md5($_POST["clave"]);
  	$con=conecta();
- 	$consulta="select usuario,clave from usuarios where usuario= '".$usuario."' and clave= '".$clave."' limit 1";
+ 	$consulta="select usuario,nombre,clave from usuarios where usuario= '".$usuario."' limit 1";
  	//echo $consulta;
  	$resConsulta=mysqli_query($con,$consulta);
+ 	$nombre = "";
+ 	$clave = "";
  	if(mysqli_num_rows($resConsulta) > 0){
  		$respuesta = true;
+ 		while($regConsulta=mysqli_fetch_array($resConsulta)){
+ 			$nombre=$regConsulta["nombre"];
+ 			$clave=$regConsulta["clave"];
+ 			
+ 		}
  	}
 
  	$salidaJSON = array('respuesta' => $respuesta);
@@ -18,8 +24,8 @@ include 'conexiones.php';
  }
  $opc = $_POST["opc"];
  switch ($opc) {
- 	case 'validaentrada':
- 		valida();
+ 	case 'buscarUsuario':
+ 		buscarusuario();
  		break;
  	
  	default:
