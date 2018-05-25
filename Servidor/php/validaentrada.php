@@ -12,7 +12,6 @@ include 'conexiones.php';
  	if(mysqli_num_rows($resConsulta) > 0){
  		$respuesta = true;
  	}
-
  	$salidaJSON = array('respuesta' => $respuesta);
  	print json_encode($salidaJSON);
  }
