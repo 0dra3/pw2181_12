@@ -9,7 +9,7 @@ include 'conexiones.php';
  	$con=conecta();
  	//$consulta="select usuario from usuarios where usuario= '".$usuario."' limit 1";
  	$consulta=sprintf("select usuario from usuarios where usuario = %s",$usuario);
- 	echo $consulta
+ 	
  	//echo $consulta;
  	$resConsulta=mysqli_query($con,$consulta);
  	//Si ya existe ne la tabla
