@@ -102,11 +102,33 @@ var inicioApp = function(){
 			//Ajax
 		}
 	}
+	var Listado = function() {
+		$("main > section").hide("slow");
+		$("#frmListados").show("slow");
+		var parametros="opc=listado"+
+						"&aleatorio="+Math.random();
+		$.ajax({
+			cache:false,
+			type:"POST",
+			dataType:"json",
+			url:"php/listado.php",
+			data: parametros,
+			success: function(response){
+				if(response.respuesta == true){
+					$("#tblListado").append(response.tabla);
 
+				}
+			},
+			error: function(xhr,ajaxOptions,thrownError){
+
+			}
+		});
+	}
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario)
-	$("#btnGuardar").on("click",Guardar)
-	$("#btnBorrar").on("click",Borrar)
+	$("#btnGuardar").on("click",Guardar);
+	$("#btnBorrar").on("click",Borrar);
+	$("#btnListado").on("click",Listado);
 }
 
 $(document).ready(inicioApp);

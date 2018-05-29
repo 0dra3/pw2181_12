@@ -14,11 +14,10 @@ include 'conexiones.php';
  	$resConsulta=mysqli_query($con,$consulta);
  	//Si ya existe ne la tabla
  	if(mysqli_num_rows($resConsulta) > 0){
- 		$consultaGuarda = sprintf("update usuarios set nombre = %s,clave = %s where usuario = %s where usuario =%s",$nombre,$clave,$usuario);
+ 		$consultaGuarda = sprintf("update usuarios set nombre = %s,clave = %s where usuario = %s",$nombre,$clave,$usuario);
 
  		}else {
- 			$consultaGuarda=sprintf
- 			("insert into usuarios values(default,usuario,nombre,clave) values(default,%s,%s,%s)",$usuario,$nombre,$clave);
+ 			$consultaGuarda=sprintf("insert into usuarios values(default,%s,%s,%s)",$usuario,$nombre,$clave);
  		}
 
  		mysqli_query($con,$consultaGuarda);
