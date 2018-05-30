@@ -57,7 +57,6 @@ var inicioApp = function(){
 		});
 		}
 	}
-
 	var teclaNombreUsuario = function(tecla){
 		if(tecla.which == 13){
 			buscarUsuarios();
@@ -104,7 +103,7 @@ var inicioApp = function(){
 	}
 	var Listado = function() {
 		$("main > section").hide("slow");
-		$("#frmListados").show("slow");
+		$("#frmListado").show("slow");
 		var parametros="opc=listado"+
 						"&aleatorio="+Math.random();
 		$.ajax({
@@ -116,7 +115,6 @@ var inicioApp = function(){
 			success: function(response){
 				if(response.respuesta == true){
 					$("#tblListado").append(response.tabla);
-
 				}
 			},
 			error: function(xhr,ajaxOptions,thrownError){
